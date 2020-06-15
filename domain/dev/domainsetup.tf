@@ -2,7 +2,6 @@
 resource "azurerm_resource_group" "rg" {
     name     = "${var.resource_prefix}${var.resource_domain}"
     location = var.location
-
 }
 
 #Creating a Vnet
@@ -34,13 +33,8 @@ data "azurerm_public_ip" "publicip" {
     resource_group_name = azurerm_resource_group.rg.name
 }
 
-#Create network security group and rules
 resource "azurerm_network_security_group" "nsg" {
     name = "${var.resource_prefix}${var.resource_domain}NSG"
     location = var.location
     resource_group_name = azurerm_resource_group.rg.name
 }
-
-
-
-
