@@ -30,10 +30,12 @@ variable "sku" {
   default = "18.04-LTS"
 }
 
+variable "azure_subscription_id" {}
 
 # Configure the Azure provider
 provider "azurerm" {
     version = "=1.32.1"
+    subscription_id = var.azure_subscription_id
 }
 
 variable "tags" {
