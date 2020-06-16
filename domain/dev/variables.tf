@@ -4,13 +4,12 @@ variable "resource_prefix" {
   default = "Development"
 }
 
-}
 # Variable for location
 variable "location" {}
   
 # Configure the Azure provider
 provider "azurerm" {
-    version = "=1.32.1"
+    version = "~>1.32.1"
 }
 
 variable "tags" {

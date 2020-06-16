@@ -47,8 +47,8 @@ resource "azurerm_network_interface" "main" {
     }
 }
 
-resource "azure_network_security_group" "main" {
-    name = "${var.prefix}-nsg"
-    resource_group_name = azurerm_resource_group.main.name
-    location = azurerm_resource_group.main.location
+resource "azurerm_network_security_group" "main" {
+  name                = "${var.resource_prefix}-nsg"
+  resource_group_name = azurerm_resource_group.main.name
+  location            = azurerm_resource_group.main.location
 }
