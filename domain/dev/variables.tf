@@ -4,11 +4,6 @@ variable "resource_prefix" {
   default = "Development"
 }
 
-# Variable for ResourceName
-variable "resource_domain" {
-  type = string
-  default = "HISS"
-
 }
 # Variable for location
 variable "location" {}
