@@ -46,3 +46,9 @@ resource "azurerm_network_interface" "main" {
         public_ip_address_id = azurerm_public_ip.main.id
     }
 }
+
+resource "azure_network_security_group" "main" {
+    name = "${var.prefix}-nsg"
+    resource_group_name = azurerm_resource_group.main.name
+    location = azurerm_resource_group.main.location
+}
