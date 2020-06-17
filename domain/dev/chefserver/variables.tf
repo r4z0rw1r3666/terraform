@@ -11,9 +11,9 @@ variable "admin_password" {
 }
 
 # Variable for ResourceType -- dev/test/prod
-variable "resource_prefix" {
+variable "prefix" {
   type = string
-  default = "Development"
+  default = "Dev"
 }
 
 # Variable for ResourceName
@@ -28,6 +28,16 @@ variable "location" {}
 variable "sku" {
   type = string
   default = "18.04-LTS"
+}
+
+variable "resource_group" {
+  type = string
+  default = "dev-resources"
+}
+
+variable "ip_address_name" {
+  type = string
+  default = "domain-clients"
 }
 
 variable "azure_subscription_id" {}
