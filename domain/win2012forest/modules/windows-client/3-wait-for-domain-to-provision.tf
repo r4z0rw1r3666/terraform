@@ -4,7 +4,7 @@
 // We sleep for 12 minutes here to give Azure some breathing room.
 resource "null_resource" "wait-for-domain-to-provision" {
   provisioner "local-exec" {
-    command = "ping localhost -n 10000"
+    command = "ping localhost -n 780"
   }
 
   depends_on = ["azurerm_virtual_machine.client"]
